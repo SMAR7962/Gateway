@@ -12,14 +12,15 @@ The unifying system comes in our bluetooth and app system. We've developed the g
 
 Altogether, we have a project which can be the next common household implementation 
 
-Below are the contnets of each file
+Below are the contnets of each file 
 
-**Lock Mechanism/CAD** contains all of the 3D printed parts, box dimensions, and assembly diagrams for the Lock Components 
-
-**Switch Mechanism/CAD** contains all of the 3D printed parts, box dimensions, and assembly diagrams for the Light Switch Components 
-
-**Arduino_Code** contains the code needed to run the sytem which will be uploaded to the arduino Nano. Notes and comments included 
+**Arduino_Code** contains the code needed to run the sytem which will be uploaded to the arduino Nano. Notes and comments included  
 
 **Bill of Materials** contains all parts and pieced required to build the gateway system including pricing and suggested retailers 
 
+**Lock Mechanism/CAD** contains all of the 3D printed parts, box dimensions, and assembly diagrams for the Lock Components 
+
 **Gateway_Flowchart** contains the coding pathing outline for how the sytem communicates with both itself, and the phone application 
+
+**Switch Mechanism/CAD** contains all of the 3D printed parts, box dimensions, and assembly diagrams for the Light Switch Components 
+
