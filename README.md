@@ -18,7 +18,9 @@ Below are the contnets of each file
 
 **Bill of Materials** contains all parts and pieced required to build the gateway system including pricing and suggested retailers 
 
-**Lock Mechanism/CAD** contains all of the 3D printed parts, box dimensions, and assembly diagrams for the Lock Components 
+**Lock Mechanism/CAD** contains all of the 3D printed parts, box dimensions, and assembly diagrams for the Lock Components  
+
+**Gateway_Circuit_Diagram** contains image containing the Gateway circuitry across both the lock and light components 
 
 **Gateway_Flowchart** contains the coding pathing outline for how the sytem communicates with both itself, and the phone application 
 
