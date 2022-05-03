@@ -11,3 +11,15 @@ The second component is the light module. The module is comprised of a light pla
 The unifying system comes in our bluetooth and app system. We've developed the gateway App which has direct control over both the lighting system and locking system. Each aspect can be controlled independently of one another, allowing the customer to have both a preference for sytem, and a back-up if needed. 
 
 Altogether, we have a project which can be the next common household implementation 
+
+Below are the contnets of each file
+
+Lock Mechanism/CAD contains all of the 3D printed parts, box dimensions, and assembly diagrams for the Lock Components 
+
+Switch Mechanism/CAD contains all of the 3D printed parts, box dimensions, and assembly diagrams for the Light Switch Components 
+
+Arduino_Code contains the code needed to run the sytem which will be uploaded to the arduino Nano. Notes and comments included 
+
+Bill of Materials contains all parts and pieced required to build the gateway system including pricing and suggested retailers 
+
+Gateway_Flowchart contains the coding pathing outline for how the sytem communicates with both itself, and the phone application 
