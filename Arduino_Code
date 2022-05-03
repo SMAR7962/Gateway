@@ -1,0 +1,101 @@
+#include <SPI.h>
+#include <MFRC522.h>
+#include <Servo.h>
+
+#define SS_PIN    10
+#define RST_PIN   9
+#define SERVO_PIN A5
+
+MFRC522 rfid(SS_PIN, RST_PIN);
+Servo servo;
+
+byte authorizedUID1[4] = {0xC3, 0xB6, 0x3D, 0x16};
+byte authorizedUID2[4] = {0x93, 0x65, 0xF8, 0x14};
+
+int angle = 0; // the current angle of servo motor
+boolean lightState;
+boolean lockState;
+char incoming_value = 0;
+
+void setup() {
+  Serial.begin(38400);
+  SPI.begin(); // init SPI bus
+  rfid.PCD_Init(); // init MFRC522
+  servo.attach(SERVO_PIN);
+  servo.write(angle); // rotate servo motor to 0°
+
+  Serial.println("Tap RFID/NFC Tag on reader");
+
+  pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
+}
+
+void loop() {
+  if (rfid.PICC_IsNewCardPresent()) { // new tag is available
+    if (rfid.PICC_ReadCardSerial()) { // NUID has been readed
+      MFRC522::PICC_Type piccType = rfid.PICC_GetType(rfid.uid.sak);
+
+      if (rfid.uid.uidByte[0] == authorizedUID1[0] &&
+          rfid.uid.uidByte[1] == authorizedUID1[1] &&
+          rfid.uid.uidByte[2] == authorizedUID1[2] &&
+          rfid.uid.uidByte[3] == authorizedUID1[3] ) {
+        Serial.println("Authorized Tag 1");
+        changeServo();
+      } else if (rfid.uid.uidByte[0] == authorizedUID2[0] &&
+                 rfid.uid.uidByte[1] == authorizedUID2[1] &&
+                 rfid.uid.uidByte[2] == authorizedUID2[2] &&
+                 rfid.uid.uidByte[3] == authorizedUID2[3] ) {
+        Serial.println("Authorized Tag 2");
+        changeServo();
+      } else {
+        Serial.print("Unauthorized Tag with UID:");
+        for (int i = 0; i < rfid.uid.size; i++) {
+          Serial.print(rfid.uid.uidByte[i] < 0x10 ? " 0" : " ");
+          Serial.print(rfid.uid.uidByte[i], HEX);
+        }
+        Serial.println();
+      }
+
+      rfid.PICC_HaltA(); // halt PICC
+      rfid.PCD_StopCrypto1(); // stop encryption on PCD
+    }
+  }
+
+  if (Serial.available() > 0)
+  {
+    incoming_value = Serial.read();
+    Serial.println(incoming_value);
+
+    if (incoming_value == '1')
+    {
+      lockState = HIGH;
+      digitalWrite(7, lockState);
+    } else if (incoming_value == '0') {
+      lockState = LOW;
+      digitalWrite(7, lockState);
+      }
+
+    if (incoming_value == '3')
+    {
+      lightState = HIGH;
+      digitalWrite(8, lightState);
+    } else if (incoming_value == '2') {
+      lightState = LOW;
+      digitalWrite(8, lightState);
+      }
+  }
+}
+
+void changeServo() {
+  // change angle of servo motor
+  if (angle == 0)
+    angle = 30;
+  else //if(angle == 90)
+    angle = 0;
+
+  // control servo motor arccoding to the angle
+  servo.write(angle);
+  Serial.print("Rotate Servo Motor to ");
+  Serial.print(angle);
+  Serial.println("°");
+... (8 lines left)
