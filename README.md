@@ -22,7 +22,8 @@ Below are the contnets of each file
 
 **Gateway_Circuit_Diagram** contains image containing the Gateway circuitry across both the lock and light components  
 
-**Gateway_Phone_App** contains the download link the the phone app compatible with with Gateway System via bluetooth 
+**Gateway_Phone_App** contains the download link the the phone app compatible with with Gateway System via bluetooth as well as 
+                      develoment intrsutctions 
 
 **Gateway_Flowchart** contains the coding pathing outline for how the sytem communicates with both itself, and the phone application 
 
