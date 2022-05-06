@@ -1,0 +1,9 @@
+[Gateway](http://ai2.appinventor.mit.edu/b/106u5). 
+
+Short description of app creation:
+
+To develop the Bluetooth app that controls the Gateway mechanisms, we used a program called "MIT App Inventor". 
+The website uses simple design features such as drag and drop block coding to make a mobile app. 
+After designing a clean interface, we used its Bluetooth connection code to pair the app and the HC-06 Bluetooth module in our device. 
+The app has the capability to turn the lights on and off, as well as lock and unlock the door. 
+
