@@ -12,7 +12,9 @@ The unifying system comes in our bluetooth and app system. We've developed the g
 
 Altogether, we have a project which can be the next common household implementation 
 
-Below are the contnets of each file 
+Below are the contnets of each file  
+
+**Assembly** contains assembly intructions, and completed examples of each component 
 
 **Arduino_Code** contains the code needed to run the sytem which will be uploaded to the arduino Nano. Notes and comments included  
 
