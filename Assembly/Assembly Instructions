@@ -1,0 +1,37 @@
+**Light Switch Assembly** 
+First, contruct the Light box housing. Use the purchased would and the dimensions given in the lock files to cut out the needed pieces (6 total) 
+Using the wood glue, assemble the the face, Wall H's, and wall V's. 
+On the Plate, place one of the servo motors into the cut out slots. Use the cut out wooden U-brackets to fasten the motor and glue into place. 
+While glue dries, fasten battery pack (filled with AA batteries), snuggly into the Face. 
+Attach the 3D printed Light arm via sliding over prongs attached to motor head
+Continue using the glue to attach two of the 3D printed hinges into the areas marked with an A on the plate. 
+Glue the third into the areea marked B on the inside of the face box. When dried, take one of the bolts and feed it through the opennings, creating 
+an arm for the hinges.  
+Use the tape to hold the wires from the battery and motor together, and feed them through the opening 
+
+**Lock Assembly** 
+First, contruct the Lock box housing. Use the purchased would and the dimensions given in the lock files to cut out the needed pieces (6 total) 
+Using the wood glue, assemble the the face, Wall H's, and wall V's. 
+On the Plate, place one of the servo motors into the cut out slots. Glue into place so that the motor head will be caing towards the top of the box. 
+Make sure that the arm is lined up with the slot cut into the H-wall 
+Attach 3D printed Lock arm via 1.6mm screw through center slot
+(Recommended it may be beneficial to begin wiring into the arduino before placing it into the box, this includes breadboard and lighting box)
+Beneath the motor, attach the arduino nano. Fasten with either the double sided tape, or a small dab of glue. The pins should be facing into the box. 
+Benath the Arduino attach the mini breadboard. 
+Allow the wires for the RFID circuit to leave the box via the hole in the plate 
+Face plate can now be friction fit onto the plate 
+
+**RFID Assembly** 
+Place RFID onto the RFID plate cut from the wood. It should fit directly over the pre cut prongs 
+Tjhe wires from the Lock box can now be fed through the door and attached when ready 
+Have the 3D printed face plate on standbye 
+
+**Final Assembly** 
+With all parts constructed, attach the light box to the rocker switch, and screw in the two 6-32 screws into the pre cut holes. They will line up 
+directly with the holes in the rocker switch. 
+Place the RFID on the opposite side of the dorr from the lock box. Feed the RFID wires through the hole in the dorr used for the lock. 
+Attach and complete the circuit. 
+From there, fir the lock box over the bolt lock so that the lock arm fits snugly over the head of the bolt. 
+Line the box with the hole thorugh which the RFID wires are fed. Screw two 1-16 screws through the opennings by the whole on the plate 
+Line the RFID on the other side so that the screws go through the same oriented holes. Tighten till both boxes fit snuggly against the door 
+Lastly, Take 3D printed RFID box and fit over the RFID plate 
